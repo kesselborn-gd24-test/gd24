@@ -2,22 +2,79 @@
     <head>
         <title>Hallo</title>
         <style>
+            body {
+                background: linear-gradient(30deg, rgb(221, 134, 62), rgb(233, 178, 107), rgb(100, 204, 100));
+            }
+            h1 {
+                color: yellow;
+            }
             ul {
                 background-color: rgb(115, 20, 204);
                 color: white;
+                padding:30px;
             }
             a {
                 color: rgb(47, 179, 135);
+                text-decoration: none;
+                border: 1px solid;
+                padding: 10px;
+                border-radius: 20px;
+                display: block;
+                text-align: center;
+                transform: rotate(20deg);
             }
+            a:hover {
+                color: white;
+                background-color: rgb(35, 27, 148);
+                transform: rotate(20deg) scale(1.5);
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
             h2 {
                 background-color: crimson;
                 color: white;
                 padding: 10px;
                 display: inline-block;
+                animation: spin 1s infinite linear;
             }
             li {
                 padding: 10px;
                 list-style-type: none;
+                margin: 10px;
+
+            }
+
+            div {
+                padding: 20px;
+                margin: 20px;
+                display: inline-block;
+            }
+            .outer {
+                background-color: green;
+                animation: spin 2s infinite alternate;
+            }
+            .inner {
+                background-color: rgb(255, 187, 0);
+                animation: spin 4s infinite alternate-reverse;
+            }
+            .inner2 {
+                background-color: tomato;
+                animation: spin 2s infinite alternate-reverse;
+            }
+
+            .inner3 {
+                background-color: aquamarine;
+                animation: spin 2s infinite ease-in-out;
+
             }
         </style>
     </head>
@@ -25,17 +82,18 @@
 
         <h1>Girls Day 2024
         </h1>
-        <h2>bei INNOQ BERLIN
-        </h2>
+        <h2>bei INNOQ BERLIN</h2>
+
+        <div class="outer">
+            <div class="inner inner1"></div>            
+            <div class="inner inner2"></div>
+            <div class="inner inner3"></div>
+        </div>
         
         <p>ich habe am Girls' Day teilgenommen</p>
         <p>hallo</p>
         
-        <a href="http://girls-day.de">
-            <img src="
-            https://www.bmfsfj.de/resource/blob/131058/4ae357ffbca48940900c25774394845c/girls-day-logo-data.jpg
-            ">
-        </a>
+
         
         
         <ul>
